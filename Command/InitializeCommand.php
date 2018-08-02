@@ -21,6 +21,9 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class InitializeCommand extends ContainerAwareCommand
 {
+    /**
+     * @var RbacInitializer
+     */
     private $rbacInitializer;
 
     /**
@@ -33,7 +36,6 @@ class InitializeCommand extends ContainerAwareCommand
         parent::__construct($name);
         $this->rbacInitializer = $rbacInitializer;
     }
-
 
     /**
      * {@inheritdoc}
